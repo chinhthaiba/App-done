@@ -16,8 +16,10 @@ const {
 
 const root = path.resolve(__dirname, '..');
 const privateKeyPath = path.join(root, '.release-secrets', 'update-private-key.pem');
+const releaseTokenPath = path.join(root, '.release-secrets', 'github-release-token.txt');
 const packagePath = path.join(root, 'package.json');
 const packageLockPath = path.join(root, 'package-lock.json');
+const DEFAULT_TOKEN_PLACEHOLDER = '__THAIASIA_DEFAULT_GITHUB_TOKEN__';
 const requestedVersion = normalizeVersion(process.argv[2]);
 
 if (!requestedVersion || requestedVersion.includes('-')) {
@@ -31,6 +33,29 @@ if (!fs.existsSync(privateKeyPath)) {
 
 function writeJson(filePath, value) {
   fs.writeFileSync(filePath, `${JSON.stringify(value, null, 2)}\n`, 'utf8');
+}
+
+function tokenFromText(value) {
+  const match = String(value || '').match(/(?:github_pat_[A-Za-z0-9_]+|ghp_[A-Za-z0-9]+)/);
+  return match ? match[0] : '';
+}
+
+function loadDefaultToken() {
+  const fromEnvironment = tokenFromText(process.env.GITHUB_TOKEN || process.env.GH_TOKEN || '');
+  if (fromEnvironment) return fromEnvironment;
+  if (fs.existsSync(releaseTokenPath)) return tokenFromText(fs.readFileSync(releaseTokenPath, 'utf8'));
+  return '';
+}
+
+function injectReleaseSecrets(relativePath, data) {
+  if (relativePath !== 'updater/auto-update-manager.js') return data;
+  const text = data.toString('utf8');
+  if (!text.includes(DEFAULT_TOKEN_PLACEHOLDER)) return data;
+  const token = loadDefaultToken();
+  if (!token) {
+    throw new Error(`Missing default GitHub token. Set GITHUB_TOKEN or create ${releaseTokenPath}`);
+  }
+  return Buffer.from(text.replaceAll(DEFAULT_TOKEN_PLACEHOLDER, token), 'utf8');
 }
 
 const pkg = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
@@ -50,7 +75,7 @@ const files = releaseFiles.map((relativePath) => {
   if (!fs.existsSync(absolutePath) || !fs.statSync(absolutePath).isFile()) {
     throw new Error(`Required release file is missing: ${safePath}`);
   }
-  const data = fs.readFileSync(absolutePath);
+  const data = injectReleaseSecrets(safePath, fs.readFileSync(absolutePath));
   return {
     path: safePath,
     size: data.length,

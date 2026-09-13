@@ -6143,7 +6143,7 @@ app.whenReady().then(async () => {
     : (os.hostname() || 'Win7').replace(/[^a-zA-Z0-9_-]/g, '_');
   reportSync = createReportSync({
     getToken: () => STARTUP_SMOKE_TEST ? '' : (autoUpdateManager ? autoUpdateManager.decryptToken() : ''),
-    getRepository: () => (autoUpdateManager ? autoUpdateManager.getRepository() : 'x247hl/thaiasia-releases'),
+    getRepository: () => (autoUpdateManager ? autoUpdateManager.getRepository() : 'chinhthaiba/chinhthaiba-thaiasia-releases'),
     machineName: runtimeMachineName,
     log: logMain,
     useFallbackToken: !STARTUP_SMOKE_TEST
@@ -6161,7 +6161,7 @@ app.whenReady().then(async () => {
 
   remoteCommandReceiver = createRemoteCommandReceiver({
     getToken: () => (autoUpdateManager ? autoUpdateManager.decryptToken() : ''),
-    getRepository: () => (autoUpdateManager ? autoUpdateManager.getRepository() : 'x247hl/thaiasia-releases'),
+    getRepository: () => (autoUpdateManager ? autoUpdateManager.getRepository() : 'chinhthaiba/chinhthaiba-thaiasia-releases'),
     machineName: runtimeMachineName,
     stateDir: DIAGNOSTICS_DIR,
     log: _remoteLog,

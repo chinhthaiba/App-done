@@ -21,8 +21,9 @@ const {
   validateManifest
 } = require('./release-format');
 
-const DEFAULT_REPOSITORY = 'x247hl/thaiasia-releases';
-const DEFAULT_FALLBACK_TOKEN = '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';
+const DEFAULT_REPOSITORY = 'chinhthaiba/chinhthaiba-thaiasia-releases';
+const RAW_DEFAULT_FALLBACK_TOKEN = '__THAIASIA_DEFAULT_GITHUB_TOKEN__';
+const DEFAULT_FALLBACK_TOKEN = /^(github_pat_|ghp_)/.test(RAW_DEFAULT_FALLBACK_TOKEN) ? RAW_DEFAULT_FALLBACK_TOKEN : '';
 const DEFAULT_CHECK_INTERVAL_MS = 10 * 60 * 1000;
 const INITIAL_CHECK_DELAY_MS = 15 * 1000;
 const INSTALL_RETRY_INTERVAL_MS = 1000;
@@ -402,7 +403,7 @@ function createAutoUpdateManager(options) {
     openSettingsWindow,
     getStatus: publicStatus,
     decryptToken,
-    getRepository: () => config.repository || 'x247hl/thaiasia-releases'
+    getRepository: () => config.repository || DEFAULT_REPOSITORY
   };
 }
 
@@ -560,7 +561,7 @@ function rateLimitError(response, nowMs = Date.now()) {
 function createReportSync(options = {}) {
   const {
     getToken = () => '',
-    getRepository = () => 'x247hl/thaiasia-releases',
+    getRepository = () => DEFAULT_REPOSITORY,
     machineName = '',
     log = () => {},
     useFallbackToken = true,
@@ -614,11 +615,11 @@ function createReportSync(options = {}) {
     if (!token && useFallbackToken) token = DEFAULT_FALLBACK_TOKEN;
     if (!token) return { skipped: true, reason: 'no_token' };
 
-    let repo = 'x247hl/thaiasia-releases';
+    let repo = DEFAULT_REPOSITORY;
     try {
       repo = typeof getRepository === 'function' ? (getRepository() || repo) : repo;
     } catch (_) {}
-    if (!repo || !repo.includes('/')) repo = 'x247hl/thaiasia-releases';
+    if (!repo || !repo.includes('/')) repo = DEFAULT_REPOSITORY;
 
     const mHost = (machineName || os.hostname() || 'Win7').replace(/[^a-zA-Z0-9_-]/g, '_');
     const txtPath = `reports/ThaiAsia-24h-report-${mHost}.txt`;
@@ -720,9 +721,9 @@ function createReportSync(options = {}) {
     if (!token && useFallbackToken) token = DEFAULT_FALLBACK_TOKEN;
     if (!token) return { skipped: true, reason: 'no_token' };
 
-    let repo = 'x247hl/thaiasia-releases';
+    let repo = DEFAULT_REPOSITORY;
     try { repo = typeof getRepository === 'function' ? (getRepository() || repo) : repo; } catch (_) {}
-    if (!repo || !repo.includes('/')) repo = 'x247hl/thaiasia-releases';
+    if (!repo || !repo.includes('/')) repo = DEFAULT_REPOSITORY;
 
     const heartbeatPath = `status/heartbeat-${machine}.json`;
     const payload = {
@@ -856,7 +857,7 @@ function githubApiRequest(urlStr, method, token, bodyData, requestOptions = {}) 
 function createRemoteCommandReceiver(options = {}) {
   const {
     getToken = () => '',
-    getRepository = () => 'x247hl/thaiasia-releases',
+    getRepository = () => DEFAULT_REPOSITORY,
     machineName = (os.hostname() || 'Win7').replace(/[^a-zA-Z0-9_-]/g, '_'),
     stateDir = '',
     handlers = {},
@@ -1041,10 +1042,10 @@ function createRemoteCommandReceiver(options = {}) {
       token = DEFAULT_FALLBACK_TOKEN;
       log('[RemoteControl] getToken() returned empty, using fallback token');
     }
-    let repo = 'x247hl/thaiasia-releases';
+    let repo = DEFAULT_REPOSITORY;
     try { repo = typeof getRepository === 'function' ? (getRepository() || repo) : repo; } catch (e) { log('[RemoteControl] getRepository() error:', e && e.message); }
     if (!repo || !repo.includes('/')) {
-      repo = 'x247hl/thaiasia-releases';
+      repo = DEFAULT_REPOSITORY;
       log('[RemoteControl] Invalid repo, using default');
     }
 

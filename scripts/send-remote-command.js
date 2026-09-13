@@ -6,14 +6,18 @@ const path = require('path');
 const readline = require('readline');
 
 const root = path.resolve(__dirname, '..');
-const DEFAULT_REPO = 'x247hl/thaiasia-releases';
+const DEFAULT_REPO = 'chinhthaiba/chinhthaiba-thaiasia-releases';
 const REPORT_BRANCH = 'reports';
 
 function findToken() {
   if (process.env.GITHUB_TOKEN) return process.env.GITHUB_TOKEN.trim();
-  const guidePath = path.join(root, 'AUTO-UPDATE-HUONG-DAN.md');
-  if (fs.existsSync(guidePath)) {
-    const text = fs.readFileSync(guidePath, 'utf8');
+  const candidates = [
+    path.join(root, '.release-secrets', 'github-release-token.txt'),
+    path.join(root, 'AUTO-UPDATE-HUONG-DAN.md')
+  ];
+  for (const candidate of candidates) {
+    if (!fs.existsSync(candidate)) continue;
+    const text = fs.readFileSync(candidate, 'utf8');
     const match = text.match(/github_pat_[A-Za-z0-9_]+/);
     if (match) return match[0].trim();
   }
@@ -314,7 +318,7 @@ async function interactiveMenu(repo, token) {
 }
 
 async function main() {
-  const repo = DEFAULT_REPO;
+  const repo = String(process.env.THAIASIA_GITHUB_REPOSITORY || DEFAULT_REPO).trim();
   const token = findToken();
 
   if (!token) {

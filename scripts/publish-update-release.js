@@ -6,7 +6,7 @@ const path = require('path');
 const { normalizeVersion } = require('../updater/release-format');
 
 const root = path.resolve(__dirname, '..');
-const DEFAULT_REPOSITORY = 'x247hl/thaiasia-releases';
+const DEFAULT_REPOSITORY = 'chinhthaiba/chinhthaiba-thaiasia-releases';
 const API_VERSION = '2022-11-28';
 const REQUEST_TIMEOUT_MS = 60 * 1000;
 const MAX_RESPONSE_BYTES = 5 * 1024 * 1024;

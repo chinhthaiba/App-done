@@ -9,7 +9,7 @@ const reportsDir = path.join(root, 'reports');
 const statusDir = path.join(reportsDir, 'status');
 const humanStatusPath = path.join(statusDir, 'ThaiAsia-trang-thai-may.txt');
 const syncStatePath = path.join(reportsDir, '.live-report-sync-state.json');
-const DEFAULT_REPO = 'x247hl/thaiasia-releases';
+const DEFAULT_REPO = 'chinhthaiba/chinhthaiba-thaiasia-releases';
 const REPORT_BRANCH = 'reports';
 const POLL_INTERVAL_MS = 60 * 1000; // In watch mode, pull every 60 seconds
 const OFFLINE_AFTER_MS = 7 * 60 * 1000;
@@ -71,9 +71,13 @@ function getRateLimitDelayMs(response, nowMs = Date.now()) {
 
 function findToken() {
   if (process.env.GITHUB_TOKEN) return process.env.GITHUB_TOKEN.trim();
-  const guidePath = path.join(root, 'AUTO-UPDATE-HUONG-DAN.md');
-  if (fs.existsSync(guidePath)) {
-    const text = fs.readFileSync(guidePath, 'utf8');
+  const candidates = [
+    path.join(root, '.release-secrets', 'github-release-token.txt'),
+    path.join(root, 'AUTO-UPDATE-HUONG-DAN.md')
+  ];
+  for (const candidate of candidates) {
+    if (!fs.existsSync(candidate)) continue;
+    const text = fs.readFileSync(candidate, 'utf8');
     const match = text.match(/github_pat_[A-Za-z0-9_]+/);
     if (match) return match[0].trim();
   }

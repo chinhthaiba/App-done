@@ -8,7 +8,7 @@ Hệ thống này không dùng Cloudflare hay server riêng. App kiểm tra mộ
 
 1. Đăng nhập GitHub bằng tài khoản `x247hl`.
 2. Chọn **New repository**.
-3. Đặt tên `thaiasia-releases`.
+3. Đặt tên `chinhthaiba-thaiasia-releases`.
 4. Chọn **Private**.
 5. Chọn **Add a README file** và tạo repository.
 
@@ -28,7 +28,7 @@ Nếu mất khóa này, các máy đã cài app sẽ không chấp nhận bản 
 2. Chọn **Generate new token**.
 3. Đặt tên, ví dụ `ThaiAsia Win7 Updater`.
 4. Chọn thời hạn đủ dài và đặt lịch nhắc trước ngày hết hạn.
-5. Trong **Repository access**, chọn **Only select repositories** và chỉ chọn `thaiasia-releases`.
+5. Trong **Repository access**, chọn **Only select repositories** và chỉ chọn `chinhthaiba-thaiasia-releases`.
 6. Trong **Repository permissions**, đặt **Contents: Read and write**. Remote Control cần quyền ghi để tạo `ack`, `done` và đồng bộ báo cáo. Không cấp quyền Actions hoặc Administration.
 7. Tạo token và chép token một lần.
 
@@ -44,7 +44,7 @@ Bản 1.1.0 là bản đầu tiên có updater, vì vậy cần chép thủ côn
 4. Chạy `create-watchdog-shortcuts.bat` nếu cần tạo lại shortcut.
 5. Mở app qua shortcut **ThaiAsia AllInOne**.
 6. Trong menu chọn **Auto Update → Cấu hình GitHub…**.
-7. Repository phải là `x247hl/thaiasia-releases`.
+7. Repository phải là `chinhthaiba/chinhthaiba-thaiasia-releases`.
 8. Dán fine-grained token có quyền **Contents: Read and write**, bật tự cài và bấm **Lưu cấu hình**.
 9. Bấm **Kiểm tra cập nhật ngay** để xác nhận kết nối.
 
@@ -115,4 +115,4 @@ Không đăng các file cấu hình/token trong `%APPDATA%` lên GitHub.
 
 Tạo token fine-grained mới với đúng quyền **Contents: Read and write**, sau đó mở **Auto Update → Cấu hình GitHub…**, dán token mới và lưu. Không cần cài lại app.
 
-Token : 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
+Token mặc định đã nằm trong app. Nếu token bị thu hồi hoặc hết hạn, tạo token mới và cập nhật trong app/code phát hành.

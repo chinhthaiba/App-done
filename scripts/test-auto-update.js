@@ -31,7 +31,7 @@ assert.strictEqual(format.compareVersions('1.0.0', '1.0.0'), 0);
 assert.strictEqual(format.compareVersions('1.0.0-beta.1', '1.0.0'), -1);
 assert.throws(() => format.normalizeReleasePath('../main.js'), /Unsafe release path/);
 assert.throws(() => format.normalizeReleasePath('C:\\main.js'), /Unsafe release path/);
-assert.strictEqual(isValidRepository('x247hl/thaiasia-releases'), true);
+assert.strictEqual(isValidRepository('chinhthaiba/chinhthaiba-thaiasia-releases'), true);
 assert.strictEqual(isValidRepository('https://github.com/x/y'), false);
 assert.strictEqual(
   normalizeReportContentForHash('Generated: 2026-01-01\n  "generatedAt": "2026-01-01",\nPhiên bản app: v1.2.18\nevent-a'),

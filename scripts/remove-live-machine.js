@@ -14,7 +14,7 @@ const root = path.resolve(__dirname, '..');
 const reportsDir = path.join(root, 'reports');
 const statusDir = path.join(reportsDir, 'status');
 const syncStatePath = path.join(reportsDir, '.live-report-sync-state.json');
-const DEFAULT_REPO = 'x247hl/thaiasia-releases';
+const DEFAULT_REPO = 'chinhthaiba/chinhthaiba-thaiasia-releases';
 const REPORT_BRANCH = 'reports';
 const DEFAULT_OFFLINE_AFTER_MS = 7 * 60 * 1000;
 

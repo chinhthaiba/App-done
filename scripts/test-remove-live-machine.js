@@ -46,7 +46,7 @@ assert.strictEqual(assessHeartbeatDeletionSafety({
   offlineAfterMs: 'invalid'
 }, now).safe, false);
 
-const parsed = parseArgs(['Nhung-Beo', '--yes', '--dry-run', '--repo=x247hl/thaiasia-releases']);
+const parsed = parseArgs(['Nhung-Beo', '--yes', '--dry-run', '--repo=chinhthaiba/chinhthaiba-thaiasia-releases']);
 assert.strictEqual(parsed.machine, 'Nhung-Beo');
 assert.strictEqual(parsed.yes, true);
 assert.strictEqual(parsed.dryRun, true);
