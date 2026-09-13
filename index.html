@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>ThaiAsia All In One App</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 30px; }
+    button { margin: 10px 0; padding: 10px 20px; font-size: 16px; }
+    #log { margin-top: 20px; background: #f4f4f4; padding: 10px; height: 200px; overflow-y: auto; border: 1px solid #ccc; }
+  </style>
+</head>
+<body>
+  <h1>ThaiAsia All In One</h1>
+  <div id="app-info" style="margin-bottom:18px; background:#e9f5ff; border:1px solid #b3d8ff; border-radius:8px; padding:12px; font-size:15px;"></div>
+  <button onclick="runScript()">Chạy Script</button>
+  <div id="log"></div>
+  <!-- Không load ThaiAsia-AllInOne.js ở trang index.html, chỉ inject vào trang admin qua main.js -->
+  <script>
+    // Hiển thị thông tin app
+    function showAppInfo(info) {
+      const el = document.getElementById('app-info');
+      if (!el) return;
+      el.innerHTML = `
+        <b>Tên app:</b> ${info.name}<br>
+        <b>Phiên bản:</b> ${info.version}<br>
+        <b>Đường dẫn:</b> ${info.cwd}<br>
+        <b>Môi trường:</b> ${info.env}<br>
+        <b>Thời gian chạy:</b> <span id="uptime">${info.uptime}s</span>
+      `;
+    }
+    // Nhận thông tin từ preload
+    window.addEventListener('DOMContentLoaded', async () => {
+      // Lấy app info từ contextBridge (contextIsolation: true)
+      if (window.electronAppInfo && typeof window.electronAppInfo.getInfo === 'function') {
+        const info = await window.electronAppInfo.getInfo();
+        showAppInfo(info);
+        setInterval(async () => {
+          const updated = await window.electronAppInfo.getInfo();
+          document.getElementById('uptime').innerText = updated.uptime + 's';
+        }, 1000);
+      } else {
+        document.getElementById('app-info').innerText = 'Không lấy được thông tin app!';
+      }
+    });
+    function runScript() {
+      if (typeof mainScriptFunction === 'function') {
+        mainScriptFunction();
+        log('Script đã chạy xong!');
+      } else {
+        log('Không tìm thấy hàm mainScriptFunction trong ThaiAsia-AllInOne.js');
+      }
+    }
+    function log(msg) {
+      document.getElementById('log').innerHTML += msg + '<br>';
+    }
+  </script>
+</body>
+</html>

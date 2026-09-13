@@ -1,0 +1,34 @@
+Uber
+
+để chạy lệnh trong console (nếu bị lỗi ):
+chạy lệnh ' allow pasting'  trước để có thể copy và paste, Chú ý phải gõ tay
+ 
+bổ sung code đơn xanh để skip gửi admin 
+mở F12 → Console, paste lệnh này:
+// Thêm 1 mã đơn thủ công (ví dụ F7D07)
+(function(code) {
+  const KEY = 'thaiasia_admin_sent_scheduled_persist_v9';
+  const TTL = 24 * 60 * 60 * 1000;
+  const cutoff = Date.now() - TTL;
+  let arr = [];
+  try { arr = JSON.parse(localStorage.getItem(KEY) || '[]'); } catch(_) {}
+  arr = arr.filter(e => e && e.ts > cutoff && e.code !== code);
+  arr.push({ code, ts: Date.now() });
+  localStorage.setItem(KEY, JSON.stringify(arr));
+  console.log('Đã thêm:', code, '| Danh sách hiện tại:', arr.map(e => e.code));
+})('F7D07');  // ← đổi mã đơn ở đây
+
+
+Xem danh sách hiện có :
+JSON.parse(localStorage.getItem('thaiasia_admin_sent_scheduled_persist_v9') || '[]')
+  .map(e => ({ code: e.code, còn: Math.round((e.ts + 86400000 - Date.now()) / 60000) + ' phút' }))
+
+Xóa 1 mã cụ thể:
+(function(code) {
+  const KEY = 'thaiasia_admin_sent_scheduled_persist_v9';
+  let arr = [];
+  try { arr = JSON.parse(localStorage.getItem(KEY) || '[]'); } catch(_) {}
+  arr = arr.filter(e => e.code !== code);
+  localStorage.setItem(KEY, JSON.stringify(arr));
+  console.log('Đã xóa:', code);
+})('F7D07');

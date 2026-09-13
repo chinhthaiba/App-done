@@ -1,0 +1,13 @@
+.release-secrets/
+release-output/
+*.update-instruction.json
+node_modules/
+dist/
+tmp/
+reports/
+wolt-bridge/out/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env
+.env.*

@@ -1,0 +1,106 @@
+======================================================================
+                   BÁO CÁO HOẠT ĐỘNG THAIASIA (24H QUA)               
+======================================================================
+Phiên bản app: v1.2.71 (Cập nhật lúc: 12/09/2026 14:39)
+Thời gian xuất báo cáo: 13/09/2026 10:24
+Khoảng thời gian theo dõi: 24 giờ qua
+
+📊 1. TỔNG KẾT ĐƠN HÀNG TRONG NGÀY:
+   - Takeaway (Live Orders):  7 đơn [7 Thủ công, 0 Tự động] (Thành công: 0/7)
+   - Uber Eats:               0 đơn [0 Thủ công, 0 Tự động] (Thành công: 0/0)
+   - Wolt:                    0 đơn [0 Thủ công, 0 Tự động] (Thành công: 0/0)
+   -> TỔNG CỘNG:              7 đơn được ghi nhận trong report
+
+📋 2. DANH SÁCH ĐƠN HÀNG (LƯỚT NHANH):
+   1. 14:31:40 | Takeaway   | [Thủ công] | Đơn #HD8D8R | Chưa hoàn tất | ⚠️ ĐÃ ĐIỀN FORM - CHƯA XÁC NHẬN TẠO ĐƠN
+   2. 14:32:01 | Takeaway   | [Thủ công] | Đơn #MDKKH6 | Chưa hoàn tất | ⚠️ ĐÃ ĐIỀN FORM - CHƯA XÁC NHẬN TẠO ĐƠN
+   3. 14:32:15 | Takeaway   | [Thủ công] | Đơn #JVWTVR | Chưa hoàn tất | ⚠️ ĐÃ ĐIỀN FORM - CHƯA XÁC NHẬN TẠO ĐƠN
+   4. 14:34:25 | Takeaway   | [Thủ công] | Đơn #7X8B43 | Chưa hoàn tất | ⚠️ ĐÃ ĐIỀN FORM - CHƯA XÁC NHẬN TẠO ĐƠN
+   5. 14:40:33 | Takeaway   | [Thủ công] | Đơn #BF39HQ | Chưa hoàn tất | ⚠️ ĐÃ ĐIỀN FORM - CHƯA XÁC NHẬN TẠO ĐƠN
+   6. 10:05:31 | Takeaway   | [Thủ công] | Đơn #CQ3CWR | Chưa hoàn tất | ⚠️ ĐÃ ĐIỀN FORM - CHƯA XÁC NHẬN TẠO ĐƠN
+   7. 10:05:39 | Takeaway   | [Thủ công] | Đơn #QD7J47 | Chưa hoàn tất | ⚠️ ĐÃ ĐIỀN FORM - CHƯA XÁC NHẬN TẠO ĐƠN
+
+🌳 3. CHI TIẾT TỪNG ĐƠN THEO NHÁNH HÀNH ĐỘNG:
+📦 [TAKEAWAY (LIVE ORDERS)] ĐƠN #HD8D8R (Bắt đầu lúc 14:31:40) -> [Thủ công] -> ⚠️ ĐÃ ĐIỀN FORM - CHƯA XÁC NHẬN TẠO ĐƠN 
+├── 🌐 [14:31:40] Tab Admin: Mở tab Admin ngầm và nạp thông tin đơn
+├── 📥 [14:31:41] Nạp dữ liệu: Tab Admin đã nhận đầy đủ thông tin đơn
+├── ✍️ [14:31:41] Điền form: Tự động điền xong 15 trường vào form Admin
+├── 🌐 [14:32:46] Tab Admin: Mở tab Admin ngầm và nạp thông tin đơn
+├── 📥 [14:32:47] Nạp dữ liệu: Tab Admin đã nhận đầy đủ thông tin đơn
+├── ✍️ [14:32:48] Điền form: Tự động điền xong 15 trường vào form Admin
+├── 🌐 [14:33:32] Tab Admin: Mở tab Admin ngầm và nạp thông tin đơn
+├── 📥 [14:33:32] Nạp dữ liệu: Tab Admin đã nhận đầy đủ thông tin đơn
+├── ✍️ [14:33:33] Điền form: Tự động điền xong 15 trường vào form Admin
+├── 🌐 [14:40:55] Tab Admin: Mở tab Admin ngầm và nạp thông tin đơn
+├── 📥 [14:40:56] Nạp dữ liệu: Tab Admin đã nhận đầy đủ thông tin đơn
+└── ✍️ [14:40:57] Điền form: Tự động điền xong 15 trường vào form Admin
+
+----------------------------------------------------------------------
+
+📦 [TAKEAWAY (LIVE ORDERS)] ĐƠN #MDKKH6 (Bắt đầu lúc 14:32:01) -> [Thủ công] -> ⚠️ ĐÃ ĐIỀN FORM - CHƯA XÁC NHẬN TẠO ĐƠN 
+├── 🌐 [14:32:01] Tab Admin: Mở tab Admin ngầm và nạp thông tin đơn
+├── 📥 [14:32:02] Nạp dữ liệu: Tab Admin đã nhận đầy đủ thông tin đơn
+└── ✍️ [14:32:03] Điền form: Tự động điền xong 15 trường vào form Admin
+
+----------------------------------------------------------------------
+
+📦 [TAKEAWAY (LIVE ORDERS)] ĐƠN #JVWTVR (Bắt đầu lúc 14:32:15) -> [Thủ công] -> ⚠️ ĐÃ ĐIỀN FORM - CHƯA XÁC NHẬN TẠO ĐƠN 
+├── 🌐 [14:32:15] Tab Admin: Mở tab Admin ngầm và nạp thông tin đơn
+├── 📥 [14:32:16] Nạp dữ liệu: Tab Admin đã nhận đầy đủ thông tin đơn
+├── ✍️ [14:32:17] Điền form: Tự động điền xong 15 trường vào form Admin
+├── 🌐 [14:34:38] Tab Admin: Mở tab Admin ngầm và nạp thông tin đơn
+├── 📥 [14:34:38] Nạp dữ liệu: Tab Admin đã nhận đầy đủ thông tin đơn
+├── ✍️ [14:34:39] Điền form: Tự động điền xong 15 trường vào form Admin
+├── 🌐 [14:41:17] Tab Admin: Mở tab Admin ngầm và nạp thông tin đơn
+├── 📥 [14:41:17] Nạp dữ liệu: Tab Admin đã nhận đầy đủ thông tin đơn
+└── ✍️ [14:41:18] Điền form: Tự động điền xong 15 trường vào form Admin
+
+----------------------------------------------------------------------
+
+📦 [TAKEAWAY (LIVE ORDERS)] ĐƠN #7X8B43 (Bắt đầu lúc 14:34:25) -> [Thủ công] -> ⚠️ ĐÃ ĐIỀN FORM - CHƯA XÁC NHẬN TẠO ĐƠN 
+├── 🌐 [14:34:25] Tab Admin: Mở tab Admin ngầm và nạp thông tin đơn
+├── 📥 [14:34:26] Nạp dữ liệu: Tab Admin đã nhận đầy đủ thông tin đơn
+└── ✍️ [14:34:26] Điền form: Tự động điền xong 15 trường vào form Admin
+
+----------------------------------------------------------------------
+
+📦 [TAKEAWAY (LIVE ORDERS)] ĐƠN #BF39HQ (Bắt đầu lúc 14:40:33) -> [Thủ công] -> ⚠️ ĐÃ ĐIỀN FORM - CHƯA XÁC NHẬN TẠO ĐƠN 
+├── 🌐 [14:40:33] Tab Admin: Mở tab Admin ngầm và nạp thông tin đơn
+├── 📥 [14:40:34] Nạp dữ liệu: Tab Admin đã nhận đầy đủ thông tin đơn
+└── ✍️ [14:40:34] Điền form: Tự động điền xong 15 trường vào form Admin
+
+----------------------------------------------------------------------
+
+📦 [TAKEAWAY (LIVE ORDERS)] ĐƠN #CQ3CWR (Bắt đầu lúc 10:05:31) -> [Thủ công] -> ⚠️ ĐÃ ĐIỀN FORM - CHƯA XÁC NHẬN TẠO ĐƠN 
+├── 🌐 [10:05:31] Tab Admin: Mở tab Admin ngầm và nạp thông tin đơn
+├── 📥 [10:05:32] Nạp dữ liệu: Tab Admin đã nhận đầy đủ thông tin đơn
+└── ✍️ [10:05:33] Điền form: Tự động điền xong 15 trường vào form Admin
+
+----------------------------------------------------------------------
+
+📦 [TAKEAWAY (LIVE ORDERS)] ĐƠN #QD7J47 (Bắt đầu lúc 10:05:39) -> [Thủ công] -> ⚠️ ĐÃ ĐIỀN FORM - CHƯA XÁC NHẬN TẠO ĐƠN 
+├── 🌐 [10:05:39] Tab Admin: Mở tab Admin ngầm và nạp thông tin đơn
+├── 📥 [10:05:40] Nạp dữ liệu: Tab Admin đã nhận đầy đủ thông tin đơn
+├── ✍️ [10:05:41] Điền form: Tự động điền xong 15 trường vào form Admin
+├── 🌐 [10:07:01] Tab Admin: Mở tab Admin ngầm và nạp thông tin đơn
+├── 📥 [10:07:01] Nạp dữ liệu: Tab Admin đã nhận đầy đủ thông tin đơn
+└── ✍️ [10:07:02] Điền form: Tự động điền xong 15 trường vào form Admin
+
+📬 4. NHẬT KÝ TỰ ĐỘNG FERTIG & GỬI BÁO CÁO TIỀN SHIP:
+   - 👆 [14:29:44] Wolt can thiệp thủ công: Klick "flt-semantics-placeholder"; semantic flt-semantics-placeholder/role=button
+   - 🔎 [14:29:48] Kết quả bấm tay Wolt "Enable accessibility": API chưa có -> chưa có; giao diện đã thay đổi; nút đã biến mất/đổi
+   - 👆 [14:40:12] Wolt can thiệp thủ công: Klick "flt-semantics-placeholder"; semantic flt-semantics-placeholder/role=button
+   - 🔎 [14:40:15] Kết quả bấm tay Wolt "Enable accessibility": API chưa có -> chưa có; giao diện đã thay đổi; nút đã biến mất/đổi
+   - 👆 [10:05:13] Wolt can thiệp thủ công: Klick "flt-semantics-placeholder"; semantic flt-semantics-placeholder/role=button
+   - 🔎 [10:05:16] Kết quả bấm tay Wolt "Enable accessibility": API chưa có -> chưa có; giao diện đã thay đổi; nút đã biến mất/đổi
+
+🔄 5. THỐNG KÊ TẢI LẠI TRANG (RELOAD) THEO TỪNG TAB:
+   - Tab Takeaway (Live Orders): 0 lần (Hoạt động liên tục, không reload)
+   - Tab Uber Eats: 0 lần (Hoạt động liên tục, không reload)
+   - Tab Wolt: 0 lần (Hoạt động liên tục, không reload)
+   - Tab Tự động Fertig: 0 lần (Hoạt động liên tục, không reload)
+   - Tab Tiền Ship: 0 lần (Hoạt động liên tục, không reload)
+
+⚠️ 6. TÌNH TRẠNG KẾT NỐI & HỆ THỐNG:
+   - Tất cả các sàn (Takeaway, Uber Eats, Wolt, Admin) hoạt động ổn định, không có đơn hàng nào bị kẹt.
+======================================================================
